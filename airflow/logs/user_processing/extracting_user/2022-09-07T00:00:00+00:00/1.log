@@ -1,0 +1,25 @@
+[2022-09-08 00:00:42,710] {taskinstance.py:826} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2022-09-07T00:00:00+00:00 [queued]>
+[2022-09-08 00:00:42,723] {taskinstance.py:826} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2022-09-07T00:00:00+00:00 [queued]>
+[2022-09-08 00:00:42,741] {taskinstance.py:1017} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-08 00:00:42,742] {taskinstance.py:1018} INFO - Starting attempt 1 of 1
+[2022-09-08 00:00:42,742] {taskinstance.py:1019} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-08 00:00:42,780] {taskinstance.py:1038} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2022-09-07T00:00:00+00:00
+[2022-09-08 00:00:42,784] {standard_task_runner.py:51} INFO - Started process 80571 to run task
+[2022-09-08 00:00:42,797] {standard_task_runner.py:75} INFO - Running: ['airflow', 'tasks', 'run', 'user_processing', 'extracting_user', '2022-09-07T00:00:00+00:00', '--job-id', '19', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpz_w64c3e']
+[2022-09-08 00:00:42,807] {standard_task_runner.py:76} INFO - Job 19: Subtask extracting_user
+[2022-09-08 00:00:42,975] {logging_mixin.py:103} INFO - Running <TaskInstance: user_processing.extracting_user 2022-09-07T00:00:00+00:00 [running]> on host airflowvm
+[2022-09-08 00:00:43,091] {taskinstance.py:1230} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-07T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-07T00:00:00+00:00
+[2022-09-08 00:00:43,097] {http.py:106} INFO - Calling HTTP method
+[2022-09-08 00:00:43,138] {base.py:65} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: XXXXXXXX, extra: None
+[2022-09-08 00:00:43,155] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2022-09-08 00:00:45,400] {http.py:110} INFO - {"results":[{"gender":"female","name":{"title":"Ms","first":"Carmen","last":"Garrido"},"location":{"street":{"number":8585,"name":"Paseo de Zorrilla"},"city":"Mérida","state":"Castilla y León","country":"Spain","postcode":69576,"coordinates":{"latitude":"-36.5138","longitude":"93.9612"},"timezone":{"offset":"+3:00","description":"Baghdad, Riyadh, Moscow, St. Petersburg"}},"email":"carmen.garrido@example.com","login":{"uuid":"25b8df85-a081-4206-9f76-df59dc450f34","username":"happysnake995","password":"holden","salt":"bFgiczx0","md5":"028a0d79a2c7d5d6225ee7c1e931efc3","sha1":"f2a6377d070516c7f7cf798e41f2701c3e469e2a","sha256":"ee9f8b551343d535501700a46cb2a6099e4af30887a8035cd4e465612e59befd"},"dob":{"date":"1965-11-02T07:43:31.283Z","age":56},"registered":{"date":"2014-04-09T07:50:26.961Z","age":8},"phone":"972-309-229","cell":"605-604-749","id":{"name":"DNI","value":"23429948-B"},"picture":{"large":"https://randomuser.me/api/portraits/women/84.jpg","medium":"https://randomuser.me/api/portraits/med/women/84.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/84.jpg"},"nat":"ES"}],"info":{"seed":"b31823961a590893","results":1,"page":1,"version":"1.4"}}
+[2022-09-08 00:00:45,429] {taskinstance.py:1135} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20220907T000000, start_date=20220908T000042, end_date=20220908T000045
+[2022-09-08 00:00:45,474] {taskinstance.py:1195} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-09-08 00:00:45,498] {local_task_job.py:118} INFO - Task exited with return code 0

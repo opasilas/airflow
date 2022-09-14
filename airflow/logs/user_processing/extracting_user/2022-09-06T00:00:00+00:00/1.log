@@ -1,0 +1,25 @@
+[2022-09-07 11:25:45,673] {taskinstance.py:826} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2022-09-06T00:00:00+00:00 [queued]>
+[2022-09-07 11:25:45,683] {taskinstance.py:826} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2022-09-06T00:00:00+00:00 [queued]>
+[2022-09-07 11:25:45,683] {taskinstance.py:1017} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-07 11:25:45,683] {taskinstance.py:1018} INFO - Starting attempt 1 of 1
+[2022-09-07 11:25:45,683] {taskinstance.py:1019} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-07 11:25:45,719] {taskinstance.py:1038} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2022-09-06T00:00:00+00:00
+[2022-09-07 11:25:45,722] {standard_task_runner.py:51} INFO - Started process 31311 to run task
+[2022-09-07 11:25:45,734] {standard_task_runner.py:75} INFO - Running: ['airflow', 'tasks', 'run', 'user_processing', 'extracting_user', '2022-09-06T00:00:00+00:00', '--job-id', '6', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpp_hirr_k']
+[2022-09-07 11:25:45,735] {standard_task_runner.py:76} INFO - Job 6: Subtask extracting_user
+[2022-09-07 11:25:45,806] {logging_mixin.py:103} INFO - Running <TaskInstance: user_processing.extracting_user 2022-09-06T00:00:00+00:00 [running]> on host airflowvm
+[2022-09-07 11:25:45,864] {taskinstance.py:1230} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-06T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-09-06T00:00:00+00:00
+[2022-09-07 11:25:45,865] {http.py:106} INFO - Calling HTTP method
+[2022-09-07 11:25:45,873] {base.py:65} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: XXXXXXXX, extra: None
+[2022-09-07 11:25:45,877] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/
+[2022-09-07 11:25:46,902] {http.py:110} INFO - {"results":[{"gender":"female","name":{"title":"Ms","first":"Lillian","last":"Payne"},"location":{"street":{"number":5025,"name":"Alexander Road"},"city":"Mountmellick","state":"Wicklow","country":"Ireland","postcode":22603,"coordinates":{"latitude":"-0.0396","longitude":"143.2467"},"timezone":{"offset":"-3:00","description":"Brazil, Buenos Aires, Georgetown"}},"email":"lillian.payne@example.com","login":{"uuid":"abd580af-277a-47b4-8046-4dd96496d30d","username":"happyelephant844","password":"disney1","salt":"DDNBUrcb","md5":"d42bf4e2f7669d242e4798217ee203c7","sha1":"7bb5696a9226d5339976b377602a5995b21d3644","sha256":"0e1f75cbf6e254ac162e252b704013bb7ed2198e0a1b59d7515b2456a37d8ba7"},"dob":{"date":"1993-05-19T14:23:09.307Z","age":29},"registered":{"date":"2013-12-30T22:24:24.062Z","age":8},"phone":"021-538-1089","cell":"081-355-0310","id":{"name":"PPS","value":"6727082T"},"picture":{"large":"https://randomuser.me/api/portraits/women/38.jpg","medium":"https://randomuser.me/api/portraits/med/women/38.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/38.jpg"},"nat":"IE"}],"info":{"seed":"4e5f97560c4ffa15","results":1,"page":1,"version":"1.4"}}
+[2022-09-07 11:25:46,964] {taskinstance.py:1135} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20220906T000000, start_date=20220907T112545, end_date=20220907T112546
+[2022-09-07 11:25:47,077] {taskinstance.py:1195} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-09-07 11:25:47,120] {local_task_job.py:118} INFO - Task exited with return code 0
